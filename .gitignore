@@ -1,2 +1,5 @@
 config.yml
 config/settings_data.json
+._*
+.DS_Store
+Thumbs.db
