@@ -100,6 +100,7 @@ body {
     padding: 0;
     color: $black;
     line-height: $line-global;
+    scroll-behavior: smooth;
 }
 body {
     font-size: $type-body-med;
@@ -289,8 +290,12 @@ button[type='submit'],
     width: 100%;
     height: $header-height;
     background-color: $header-background-color;
-    padding: $line-global $offset-global;
-    @include flex-space-between;
+
+    .header-inner {
+        padding: $line-global $offset-global;
+        position: relative;
+        @include flex-space-between;
+    }
 
     .shop-link {
         order: -1;
