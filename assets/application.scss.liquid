@@ -340,6 +340,14 @@ button[type='submit'],
     min-height: 400px;
     padding-bottom: $offset-global;
 }
+.index-products:before {
+    display: block;
+    content: ' ';
+    margin-top: -($header-height + $line-global);
+    height: $header-height + $line-global;
+    visibility: hidden;
+    pointer-events: none;
+}
 
 //  SHARED PRODUCT STYLES
 .product-info-section {
