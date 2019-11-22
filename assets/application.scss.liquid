@@ -292,13 +292,17 @@ button[type='submit'],
     background-color: $header-background-color;
 
     .header-inner {
+        height: 100%;
         padding: $line-global $offset-global;
         position: relative;
         @include flex-space-between;
     }
 
-    .shop-link {
-        order: -1;
+    .logo {
+        padding-top: 10px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .cart-close-text {
         display: none;
@@ -578,7 +582,8 @@ html.mini-cart-open {
             display: inline-block;
         }
     }
-    main {
+    main,
+    footer {
         opacity: 0.3;
         pointer-events: none;
     }
@@ -617,6 +622,11 @@ html.mini-cart-open {
         padding: $line-global;
     }
 
+    .index-products:before {
+        margin-top: -($header-height + $line-global);
+        height: $header-height + $line-global;
+    }
+
     .product-card {
         .card-image {
             grid-row: 1;
@@ -647,5 +657,11 @@ html.mini-cart-open {
 
     .footer-top {
         grid-template-columns: 1fr;
+    }
+
+    .footer-global {
+        li:not(:last-child) {
+            margin-bottom: $line-global / 2;
+        }
     }
 }
